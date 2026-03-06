@@ -1,81 +1,122 @@
-Foundry:: Solidity Project
-⭐️Foundry Fund Me
-This is a crowd sourcing app.
+Foundry Fund Me
 
-Getting Started
-Requirements
-git
-You'll know you did it right if you can run git --version and you see a response like git version x.x.x
-foundry
-You'll know you did it right if you can run forge --version and you see a response like forge 0.2.0 (816e00b 2023-03-16T00:05:26.396218Z)
-Quickstart
-git clone https://github.com/LareineHan/foundry-fund-me-f23
-cd foundry-fund-me-f23
+A crowd-sourcing Ethereum app that allows you to create and fund projects using smart contracts.
+
+Created by: Dimitris Kazantzis
+LinkedIn: https://www.linkedin.com/in/dimitris-kazantzis-5b575936a/
+
+---
+
+Requirements:
+
+- Git
+  Verify installation:
+    git --version
+
+- Foundry
+  Verify installation:
+    forge --version
+  You should see something like:
+    forge 0.2.0 (816e00b 2023-03-16T00:05:26.396218Z)
+
+---
+
+Quickstart:
+
+git clone https://github.com/dimk472/Foundry-Fund-Me.git
+cd Foundry-Fund-Me
 forge build
-Optional Gitpod
-If you can't or don't want to run and install locally, you can work with this repo in Gitpod. If you do this, you can skip the clone this repo part.
 
-Open in Gitpod
+Optional: Gitpod
+If you cannot or do not want to run locally, you can use Gitpod (https://gitpod.io) to work online.
 
-Usage
+---
+
+Usage:
+
 Deploy:
-forge script script/DeployFundMe.s.sol
-Testing
-We talk about 4 test tiers in the video.
 
-Unit
-Integration
-Forked
-Staging
-This repo we cover #1 and #3.
+forge script script/DeployFundMe.s.sol
+
+Testing:
+The project supports multiple test tiers:
+1. Unit
+2. Integration
+3. Forked
+4. Staging
+
+This repository covers Unit and Forked tests:
 
 forge test
-or
 
-// Only run test functions matching the specified regex pattern.
-
-"forge test -m testFunctionName" is deprecated. Please use 
+To run specific test functions:
 
 forge test --match-test testFunctionName
-or
+
+With forked testnet:
 
 forge test --fork-url $SEPOLIA_RPC_URL
-Test Coverage
+
+Test Coverage:
+
 forge coverage
-Deployment to a testnet or mainnet
-Setup environment variables
-You'll want to set your SEPOLIA_RPC_URL and PRIVATE_KEY as environment variables. You can add them to a .env file, similar to what you see in .env.example.
 
-PRIVATE_KEY: The private key of your account (like from metamask). NOTE: FOR DEVELOPMENT, PLEASE USE A KEY THAT DOESN'T HAVE ANY REAL FUNDS ASSOCIATED WITH IT.
-You can learn how to export it here.
-SEPOLIA_RPC_URL: This is url of the sepolia testnet node you're working with. You can get setup with one for free from Alchemy
-Optionally, add your ETHERSCAN_API_KEY if you want to verify your contract on Etherscan.
+---
 
-Get testnet ETH
-Head over to faucets.chain.link and get some testnet ETH. You should see the ETH show up in your metamask.
+Deployment to Testnet or Mainnet:
 
-Deploy
-forge script script/DeployFundMe.s.sol --rpc-url $SEPOLIA_RPC_URL --private-key $PRIVATE_KEY --broadcast --verify --etherscan-api-key $ETHERSCAN_API_KEY
-Scripts
-After deploying to a testnet or local net, you can run the scripts.
+Environment Setup:
+Create a .env file and add:
 
-Using cast deployed locally example:
+PRIVATE_KEY=<Your MetaMask private key>
+SEPOLIA_RPC_URL=<URL of Sepolia node, e.g., from Alchemy>
+ETHERSCAN_API_KEY=<Optional, for contract verification on Etherscan>
+
+Warning: Use testnet private keys only, do not use real funds.
+
+Get Testnet ETH:
+Visit Chainlink Faucet (https://faucets.chain.link/sepolia) to receive test ETH for your MetaMask wallet.
+
+Deploy to Sepolia:
+
+forge script script/DeployFundMe.s.sol \
+--rpc-url $SEPOLIA_RPC_URL \
+--private-key $PRIVATE_KEY \
+--broadcast \
+--verify \
+--etherscan-api-key $ETHERSCAN_API_KEY
+
+---
+
+Scripts:
+
+Fund Contract:
 
 cast send <FUNDME_CONTRACT_ADDRESS> "fund()" --value 0.1ether --private-key <PRIVATE_KEY>
+
 or
 
-forge script script/Interactions.s.sol --rpc-url sepolia  --private-key $PRIVATE_KEY  --broadcast
-Withdraw
-cast send <FUNDME_CONTRACT_ADDRESS> "withdraw()"  --private-key <PRIVATE_KEY>
-Estimate gas
-You can estimate how much gas things cost by running:
+forge script script/Interactions.s.sol --rpc-url sepolia --private-key $PRIVATE_KEY --broadcast
+
+Withdraw:
+
+cast send <FUNDME_CONTRACT_ADDRESS> "withdraw()" --private-key <PRIVATE_KEY>
+
+Estimate Gas:
 
 forge snapshot
-And you'll see an output file called .gas-snapshot
 
-Formatting
-To run code formatting:
+This will create a .gas-snapshot file with results.
+
+---
+
+Formatting:
 
 forge fmt
-Thank you!
-If you appreciated this, feel free to follow me!
+
+---
+
+Acknowledgements:
+
+If you enjoyed this project, feel free to connect with me on LinkedIn:
+https://www.linkedin.com/in/dimitris-kazantzis-5b575936a/
