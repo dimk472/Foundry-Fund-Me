@@ -1,6 +1,10 @@
 Foundry Fund Me 🏗️
+
+
 https://img.shields.io/badge/built%2520with-Foundry-FFDB1C.svg
+
 https://img.shields.io/badge/Solidity-%255E0.8.18-363636.svg
+
 https://img.shields.io/badge/license-MIT-blue.svg
 
 A crowd-sourcing Ethereum app that allows you to create and fund projects using smart contracts.
@@ -120,6 +124,7 @@ forge fmt
 If you enjoyed this project, feel free to connect with me!
 
 https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
+
 https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
 
 ⭐ Support
