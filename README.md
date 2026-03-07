@@ -1,15 +1,20 @@
 Foundry Fund Me 🏗️
+
+
 https://img.shields.io/badge/built%2520with-Foundry-FFDB1C.svg
+
 https://img.shields.io/badge/Solidity-%255E0.8.18-363636.svg
 
 A crowd-sourcing Ethereum app that allows you to create and fund projects using smart contracts.
 
 👨‍💻 Created by: Dimitris Kazantzis
+
 LinkedIn: https://www.linkedin.com/in/dimitris-kazantzis-5b575936a/
 
 GitHub: https://github.com/dimk472
 
 📋 Table of Contents
+
 Requirements
 
 Quickstart
