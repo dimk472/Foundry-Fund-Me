@@ -1,65 +1,60 @@
-Foundry Fund Me 🏗️
+# 🏗️ Foundry Fund Me
 
+![Built with Foundry](https://img.shields.io/badge/built%20with-Foundry-FFDB1C.svg)
+![Solidity](https://img.shields.io/badge/Solidity-%5E0.8.18-363636.svg)
 
-https://img.shields.io/badge/built%2520with-Foundry-FFDB1C.svg
+A crowd-sourcing Ethereum app that allows you to **create and fund projects** using smart contracts.
 
-https://img.shields.io/badge/Solidity-%255E0.8.18-363636.svg
+👨‍💻 **Created by:** [Dimitris Kazantzis](https://www.linkedin.com/in/dimitris-kazantzis-5b575936a/)  
+💻 GitHub: [dimk472](https://github.com/dimk472)
 
-A crowd-sourcing Ethereum app that allows you to create and fund projects using smart contracts.
+---
 
-👨‍💻 Created by: Dimitris Kazantzis
+## 📋 Table of Contents
+1. [Requirements](#-requirements)
+2. [Quickstart](#-quickstart)
+3. [Usage](#-usage)
+4. [Testing](#-testing)
+5. [Deployment](#-deployment)
+6. [Scripts](#-scripts)
+7. [Formatting](#-formatting)
+8. [Connect](#-connect)
 
-LinkedIn: https://www.linkedin.com/in/dimitris-kazantzis-5b575936a/
+---
 
-GitHub: https://github.com/dimk472
+## 🔧 Requirements
 
-#📋 Table of Contents
+- **Git**  
+  Verify installation:
+  ```bash
+  git --version
 
-Requirements
-
-Quickstart
-
-Usage
-
-Testing
-
-Deployment
-
-Scripts
-
-Formatting
-
-Connect
-
-#🔧 Requirements
-
-Git
-bash
-git --version
 Foundry
-bash
+Verify installation:
+
 forge --version
+
 Expected output:
 
-text
 forge 0.2.0 (816e00b 2023-03-16T00:05:26.396218Z)
 ⚡ Quickstart
-bash
+
+Clone the repository and build:
+
 git clone https://github.com/dimk472/Foundry-Fund-Me.git
 cd Foundry-Fund-Me
 forge build
+
 Optional: Gitpod
-If you don't want to run locally, you can use Gitpod.
+If you don't want to run locally, you can use Gitpod
+ for an online dev environment.
 
-#💻 Usage
-
+💻 Usage
 Deploy
-bash
 forge script script/DeployFundMe.s.sol
+🧪 Testing
 
-#🧪 Testing
-
-The project supports:
+Supported test types:
 
 Unit Tests
 
@@ -69,33 +64,38 @@ Forked Tests
 
 Staging Tests
 
-bash
-# Run all tests
+Run all tests:
+
 forge test
 
-# Run specific test
+Run a specific test:
+
 forge test --match-test testFunctionName
 
-# Run forked tests
+Run forked tests:
+
 forge test --fork-url $SEPOLIA_RPC_URL
 
-# Test coverage
+Test coverage:
+
 forge coverage
 🌐 Deployment
 Environment Setup
+
 Create a .env file:
 
-bash
 PRIVATE_KEY=<Your private key>
 SEPOLIA_RPC_URL=<URL from Alchemy or Infura>
 ETHERSCAN_API_KEY=<Optional>
-⚠️ Warning: Use testnet private keys only, never use real funds!
+
+⚠️ Warning: Use testnet private keys only, never real funds!
 
 Get Testnet ETH
-🔗 Chainlink Faucet
+
+Use the Chainlink Faucet
+ to get test ETH for Sepolia.
 
 Deploy to Sepolia
-bash
 forge script script/DeployFundMe.s.sol \
 --rpc-url $SEPOLIA_RPC_URL \
 --private-key $PRIVATE_KEY \
@@ -104,23 +104,24 @@ forge script script/DeployFundMe.s.sol \
 --etherscan-api-key $ETHERSCAN_API_KEY
 📜 Scripts
 Fund (Send Money)
-bash
 cast send <CONTRACT_ADDRESS> "fund()" --value 0.1ether --private-key <PRIVATE_KEY>
 Withdraw
-bash
 cast send <CONTRACT_ADDRESS> "withdraw()" --private-key <PRIVATE_KEY>
 Estimate Gas
-bash
 forge snapshot
+
+This will generate a .gas-snapshot file with gas usage info.
+
 ✨ Formatting
-bash
 forge fmt
 🔗 Connect with Me
-LinkedIn: https://www.linkedin.com/in/dimitris-kazantzis-5b575936a/
 
-GitHub: https://github.com/dimk472
+LinkedIn: Dimitris Kazantzis
 
-Feel free to connect with me for any questions or collaborations! 🚀
+GitHub: dimk472
+
+Feel free to connect for questions or collaborations! 🚀
 
 ⭐ Support
-If you like this project, please give it a star on GitHub!
+
+If you like this project, please give it a star on GitHub! 🌟
