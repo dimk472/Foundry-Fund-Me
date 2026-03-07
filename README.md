@@ -13,7 +13,7 @@ LinkedIn: https://www.linkedin.com/in/dimitris-kazantzis-5b575936a/
 
 GitHub: https://github.com/dimk472
 
-📋 Table of Contents
+#📋 Table of Contents
 
 Requirements
 
@@ -31,7 +31,8 @@ Formatting
 
 Connect
 
-🔧 Requirements
+#🔧 Requirements
+
 Git
 bash
 git --version
@@ -50,11 +51,14 @@ forge build
 Optional: Gitpod
 If you don't want to run locally, you can use Gitpod.
 
-💻 Usage
+#💻 Usage
+
 Deploy
 bash
 forge script script/DeployFundMe.s.sol
-🧪 Testing
+
+#🧪 Testing
+
 The project supports:
 
 Unit Tests
